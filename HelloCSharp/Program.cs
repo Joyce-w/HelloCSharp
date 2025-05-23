@@ -1,5 +1,6 @@
 ﻿//using Inheritence_Polymorphism;
 using IAnimal;
+using Inheritence_Polymorphism;
 
 namespace HelloCSharp
 {
@@ -15,10 +16,20 @@ namespace HelloCSharp
             myCat.MakeSound();
 
 
-            /*Interface*/
+            ///*Interface*/
             Dog myDog = new Dog();
             myDog.Eat();
-        }
 
+            /*Polymorphism w/ List of Animals*/
+            List<Inheritence_Polymorphism.Animal> animals = new List<Inheritence_Polymorphism.Animal>();
+            animals.Add(new Inheritence_Polymorphism.Dog());
+            animals.Add(new Inheritence_Polymorphism.Cat());
+
+            foreach (var animal in animals)
+            {
+                animal.MakeSound();
+            }
+
+        }
     }
 }

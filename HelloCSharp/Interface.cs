@@ -26,10 +26,10 @@
             Console.WriteLine("Bark");
         }
 
-        public void Eat()
-        {
-            Console.WriteLine("Kibble");
-        }
+        //public void Eat()
+        //{
+        //    Console.WriteLine("Kibble");
+        //}
     }
 
 }
