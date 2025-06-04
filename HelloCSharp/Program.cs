@@ -1,6 +1,7 @@
 ﻿//using Inheritence_Polymorphism;
-using IAnimal;
-using Inheritence_Polymorphism;
+//using IAnimal;
+//using Inheritence_Polymorphism;
+using PersonObject;
 
 namespace HelloCSharp
 {
@@ -8,28 +9,34 @@ namespace HelloCSharp
     {
         static void Main(string[] args)
         {
-            /*create instances of dog/cat*/
-            Dog myDog = new Dog();
-            Cat myCat = new Cat();
+            ///*create instances of dog/cat*/
+            //Dog myDog = new Dog();
+            //Cat myCat = new Cat();
 
-            myDog.MakeSound();
-            myCat.MakeSound();
+            //myDog.MakeSound();
+            //myCat.MakeSound();
 
 
-            ///*Interface*/
-            Dog myDog = new Dog();
-            myDog.Eat();
+            /////*Interface*/
+            //Dog myDog = new Dog();
+            //myDog.Eat();
 
-            /*Polymorphism w/ List of Animals*/
-            List<Inheritence_Polymorphism.Animal> animals = new List<Inheritence_Polymorphism.Animal>();
-            animals.Add(new Inheritence_Polymorphism.Dog());
-            animals.Add(new Inheritence_Polymorphism.Cat());
+            ///*Polymorphism w/ List of Animals*/
+            //List<Inheritence_Polymorphism.Animal> animals = new List<Inheritence_Polymorphism.Animal>();
+            //animals.Add(new Inheritence_Polymorphism.Dog());
+            //animals.Add(new Inheritence_Polymorphism.Cat());
 
-            foreach (var animal in animals)
-            {
-                animal.MakeSound();
-            }
+            //foreach (var animal in animals)
+            //{
+            //    animal.MakeSound();
+            //}
 
+            
+            //Person_Object 
+            Person personOne = new Person("Miguel", 32);
+            Person personTwo = new Person("Hannah", 28);
+
+            personOne.Greeting(); // "Miguel says hello"
         }
     }
 }
