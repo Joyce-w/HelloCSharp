@@ -1,7 +1,8 @@
 ﻿//using Inheritence_Polymorphism;
 //using IAnimal;
 //using Inheritence_Polymorphism;
-using PersonObject;
+//using PersonObject;
+using Async_Await;
 
 namespace HelloCSharp
 {
@@ -31,12 +32,22 @@ namespace HelloCSharp
             //    animal.MakeSound();
             //}
 
-            
-            //Person_Object 
-            Person personOne = new Person("Miguel", 32);
-            Person personTwo = new Person("Hannah", 28);
 
-            personOne.Greeting(); // "Miguel says hello"
+            //Person_Object 
+            //Person personOne = new Person("Miguel", 32);
+            //Person personTwo = new Person("Hannah", 28);
+
+            //personOne.Greeting(); // "Miguel says hello"
+
+
+            //Async/Await
+        public async Task SimulateDelay(int secondUnit)
+        {
+            await Task.Delay(secondUnit);
+
+            Console.WriteLine("Message appearing after " + secondUnit + " time.");
+
         }
+
     }
 }

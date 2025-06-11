@@ -1,25 +1,35 @@
-﻿namespace PersonObject;
-
-public class Person
+﻿namespace IAnimal
 {
-    string Name { get; set; }
-    int Age { get; set; }
-
-    public Person(string name, int age)
+    public interface IAnimal
     {
-        Name = name;
-        Age = age;
+        void Eat();
     }
 
-    public void Greeting()
+    //Add interface to animal class
+    public class Animal : IAnimal
     {
-        Console.WriteLine(Name + " says hello!");
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("Generic animal sound");
+        }
+
+        public void Eat()
+        {
+            Console.WriteLine("Generic animal food");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("Bark");
+        }
+
+        //public void Eat()
+        //{
+        //    Console.WriteLine("Kibble");
+        //}
     }
 
 }
-
-////create 2 objects of person class and assign different values to 
-
-//Person personOne = new Person("Miguel", 32);
-//    Person personTwo = new Person("Hannah", 28);
-//}
